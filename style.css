@@ -1,0 +1,77 @@
+h1 {
+  color: #30343f;
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 4em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  height: 25vh;
+}
+body {
+  background-image: url(./Background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+button {
+  background-color: #30343f; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 50%;
+  margin: 4px 60px;
+  position: relative;
+}
+
+.image-container {
+  margin-top: 20px;
+}
+
+.buttons {
+  gap: 10px; /* Відстань між кнопками */
+  display: flex;
+  position: relative;
+}
+img {
+  width: 300px; /* Розмір картинки */
+  border-radius: 10px;
+}
+.modal {
+  display: none; /* Ховаємо модальне вікно за замовчуванням */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Напівпрозорий фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+#no-btn {
+  position: relative;
+  left: 100px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be my Valentine</title>
+  </head>
+  <body>
+    <h1>Will you be my valentine?</h1>
+
+    <div class="button-container">
+      <button onclick="showImage('yes')">Yes!</button>
+      <button id="no-btn" onmouseover="runAway()">No(</button>
+    </div>
+
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="Response Image" />
+    </div>
+    <script>
+      function showImage(response) {
+        let imgSrc =
+          response === "yes"
+            ? "https://i.pinimg.com/originals/a8/05/94/a80594f73aed7e81210600330bea0085.gif" // Картинка для "Yes!"
+            : "https://i.imgur.com/yh6Zp4w.png"; // Картинка для "No("
+
+        document.getElementById("modal-img").src = imgSrc;
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+      function runAway() {
+        let btn = document.getElementById("no-btn");
+        let container = document.querySelector(".buttons"); // Контейнер кнопок
+        btn.style.position = "absolute";
+        let x = Math.random() * (window.innerWidth - btn.clientWidth);
+        let y = Math.random() * (window.innerHeight - btn.clientHeight);
+        btn.style.left = `${x}px`;
+        btn.style.top = `${y}px`;
+      }
+    </script>
+  </body>
+</html>
