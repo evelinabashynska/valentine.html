@@ -39,6 +39,7 @@ button {
   gap: 10px; /* Відстань між кнопками */
   display: flex;
   position: relative;
+  flex-wrap: wrap;
 }
 img {
   width: 300px; /* Розмір картинки */
@@ -71,6 +72,23 @@ img {
   color: white;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 8vw;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
 #no-btn {
   position: relative;
   left: 100px;
